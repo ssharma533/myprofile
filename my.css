@@ -1,0 +1,60 @@
+/* Global styles */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Light grey */
+  margin: 0;
+}
+
+.teal-text {
+  color: #008080; /* Teal color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Lighter shadow with offset (1px horizontally, 1px vertically), blur radius (2px), and color (rgba black with 30% opacity) */
+}
+
+.highlight {
+  font-weight: bold;
+  color: #008080; /* Teal color */
+}
+
+.scrollable-content {
+  max-height: calc(100vh - 0px); /* Adjust the height as needed */
+  overflow-y: auto;
+}
+
+/* Header styles */
+
+.w3-content {
+  max-width: 1400px;
+}
+
+/* Left Column styles */
+
+.w3-third {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Footer styles */
+
+.w3-teal {
+  background-color: #008080; /* Teal color */
+  color: white;
+}
+
+/* Profile photo styles */
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+}
+
+/* Links styles */
+
+a {
+  color: #0077b5; /* LinkedIn blue */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
