@@ -30,9 +30,10 @@ body {
 /* Left Column styles */
 
 .w3-third {
-  max-height: 80vh;
+  height: 100vh; /* Adjust the height as needed */
   overflow-y: auto;
 }
+
 
 /* Footer styles */
 
