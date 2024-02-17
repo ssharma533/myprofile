@@ -1,13 +1,13 @@
 /* Global styles */
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5; /* Light grey */
+  font-family: serif, sans-serif;
+  background-color: rgb(249, 249, 249); /* Light grey */
   margin: 0;
 }
 
 .teal-text {
-  color: #008080; /* Teal color */
+  color: #78c6c6; /* Teal color */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Lighter shadow with offset (1px horizontally, 1px vertically), blur radius (2px), and color (rgba black with 30% opacity) */
 }
 
@@ -30,7 +30,8 @@ body {
 /* Left Column styles */
 
 .w3-third {
-  height: 100vh; /* Adjust the height as needed */
+  font-family: 'Roboto Slab', serif
+  height: 500vh; /* Adjust the height as needed */
   overflow-y: auto;
 }
 
@@ -38,7 +39,7 @@ body {
 /* Footer styles */
 
 .w3-teal {
-  background-color: #008080; /* Teal color */
+  background-color: #748279; /* Teal color */
   color: white;
 }
 
@@ -48,8 +49,22 @@ body {
   width: 100%;
   height: auto;
 }
+.w3-twothird {
+  background-color: rgb(226, 239, 245); /* Change this to the desired background color */
+}
 
 /* Links styles */
+.w3-twothird .w3-container {
+  background-color: rgb(226, 239, 245); /* Change this to the desired background color */
+}
+/* Work Experience header */
+.w3-twothird .w3-container h2 {
+  font-family: 'Roboto Slab', serif;
+  background-color: rgb(226, 239, 245);
+  padding: 10px; /* Add padding to make the background color visible */
+}
+
+
 
 a {
   color: #0077b5; /* LinkedIn blue */
@@ -59,3 +74,4 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
