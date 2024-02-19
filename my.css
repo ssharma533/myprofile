@@ -74,3 +74,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.dark-mode {
+  background-color: #333;
+  color: #ddd;
+}
+
+.dark-mode button {
+  background-color: #555;
+  color: #ddd;
+}
+
