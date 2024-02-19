@@ -83,4 +83,27 @@ a:hover {
   background-color: #555;
   color: #ddd;
 }
+/* Add this CSS to your existing styles or to the <style> tag in your HTML */
+
+.dark-mode {
+  background-color: #333;
+  color: #ddd;
+}
+
+.dark-mode button {
+  background-color: #555;
+  color: #ddd;
+}
+
+/* Apply dark mode styles to elements inside left and right columns */
+.dark-mode .w3-third .w3-white,
+.dark-mode .w3-twothird .w3-container,
+.dark-mode .w3-twothird .w3-container h2,
+.dark-mode .w3-twothird .w3-container p,
+.dark-mode .w3-twothird .w3-container ul,
+.dark-mode .w3-twothird .w3-container li {
+  background-color: #333;
+  color: #ddd;
+}
+
 
