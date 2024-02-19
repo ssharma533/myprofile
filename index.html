@@ -9,6 +9,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+   <script>
+    function toggleMode() {
+      var body = document.body;
+      body.classList.toggle("dark-mode");
+
+      // Change icon based on mode
+      var icon = document.getElementById("mode-icon");
+      icon.classList.toggle("fa-sun");
+      icon.classList.toggle("fa-lightbulb");
+    }
+  </script>
 
   <style>
   .teal-text {
@@ -31,6 +45,10 @@
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
+  <button id="mode-toggle" class="w3-button w3-round w3-teal w3-hover-teal w3-padding-small w3-right" onclick="toggleMode()">
+  <i id="mode-icon" class="fas fa-lightbulb"></i> <!-- Initially assuming light mode -->
+</button>
+
 
   <!-- The Grid -->
   <div class="w3-row-padding">
