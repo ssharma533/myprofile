@@ -11,60 +11,69 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+  <style>
+    .teal-text {
+      color: #008080;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .highlight {
+      font-weight: bold;
+      color: #008080;
+    }
+    .scrollable-content {
+      max-height: calc(120vh - 0px);
+      overflow-y: auto;
+    }
+    /* Button styling */
+    #mode-toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #008080;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    #mode-toggle:hover {
+      background-color: #005454;
+    }
+  </style>
 
-   <script>
+  <script>
     function toggleMode() {
       var body = document.body;
       body.classList.toggle("dark-mode");
 
       // Change icon based on mode
       var icon = document.getElementById("mode-icon");
-      icon.classList.toggle("fa-sun");
       icon.classList.toggle("fa-lightbulb");
+      icon.classList.toggle("fa-sun");
     }
   </script>
-
-  <style>
-  .teal-text {
-    color: #008080; /* Teal color */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Lighter shadow with offset (1px horizontally, 1px vertically), blur radius (2px), and color (rgba black with 30% opacity) */
-  }
-</style>
-<style>
-  .highlight {
-    font-weight: bold;
-    color: #008080; /* Teal color */
-  }
-  .scrollable-content {
-    max-height: calc(120vh - 0px); /* Adjust the height as needed */
-    overflow-y: auto;
-  }
-</style>
 </head>
 <body>
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
-  <button id="mode-toggle" class="w3-button w3-round w3-teal w3-hover-teal w3-padding-small w3-right" onclick="toggleMode()" title="Change to Dark Mode">
-  <i id="mode-icon" class="fas fa-lightbulb"></i> <!-- Initially assuming light mode -->
-</button>
-
-
+  <!-- Toggle Button for Dark/Light Mode -->
+  <button id="mode-toggle" class="w3-button w3-round" onclick="toggleMode()" title="Change to Dark Mode">
+    <i id="mode-icon" class="fas fa-lightbulb"></i> <!-- Initially assuming light mode -->
+  </button>
 
   <!-- The Grid -->
   <div class="w3-row-padding">
-
-<!-- Left Column -->
-<div class="w3-third" style="max-height: 120vh; overflow-y: auto;">
-  <div class="w3-white w3-text-grey w3-card-4">
-    <div class="w3-display-container">
-    <!-- LinkedIn profile link in a box -->
-    <div style="position: absolute; top: 10px; left: 10px; background-color: #0077b5; padding: 5px; border: 1px solid #0077b5; border-radius: 5px;">
-      <a href="https://www.linkedin.com/in/sagar1350/" target="_blank" style="color: white; text-decoration: none;" title="Visit my LinkedIn Profile">
-          <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 24px;"></i>
-      </a>
-  </div>
-  
+    <!-- Left Column -->
+    <div class="w3-third" style="max-height: 120vh; overflow-y: auto;">
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <!-- LinkedIn profile link in a box -->
+          <div style="position: absolute; top: 10px; left: 10px; background-color: #0077b5; padding: 5px; border: 1px solid #0077b5; border-radius: 5px;">
+            <a href="https://www.linkedin.com/in/sagar1350/" target="_blank" style="color: white; text-decoration: none;" title="Visit my LinkedIn Profile">
+                <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 24px;"></i>
+            </a>
+          </div>
 
 
         <!-- Email Me link -->
