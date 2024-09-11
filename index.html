@@ -1,104 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sagar Sharma - IT Support Professional</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header, section {
-            padding: 20px;
-            margin: 20px;
-        }
-        header {
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-        .contact-info {
-            text-align: center;
-        }
-        .contact-info a {
-            display: block;
-            margin: 5px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagar Sharma - Portfolio</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .card {
+      perspective: 1000px;
+    }
+    .card-content {
+      background-color: #fff;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .card:hover .card-content {
+      transform: rotateY(10deg) rotateX(10deg) translateZ(20px);
+    }
+    .teal-text {
+      color: #008080;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .highlight {
+      font-weight: bold;
+      color: #008080;
+    }
+    .scrollable-content {
+      max-height: calc(100vh - 0px);
+      overflow-y: auto;
+    }
+    #mode-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #008080;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 100;
+    }
+    #mode-toggle:hover {
+      background-color: #005454;
+    }
+    .dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+    .dark-mode .teal-text {
+      color: #80cbc4;
+    }
+    .w3-row-padding {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .w3-third, .w3-twothird {
+      flex: 1;
+      min-width: 300px;
+      margin: 10px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    @media screen and (max-width: 768px) {
+      .w3-third, .w3-twothird {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+  <script>
+    function toggleMode() {
+      var body = document.body;
+      body.classList.toggle("dark-mode");
+
+      // Change icon based on mode
+      var icon = document.getElementById("mode-icon");
+      icon.classList.toggle("fa-lightbulb");
+      icon.classList.toggle("fa-sun");
+    }
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Sagar Sharma</h1>
-        <p>Experienced IT Support Professional | Active Directory & MDM Specialist | Client-Focused Technical Expert</p>
-    </header>
+  <!-- Toggle Button for Dark/Light Mode -->
+  <button id="mode-toggle" onclick="toggleMode()" title="Change to Dark Mode">
+    <i id="mode-icon" class="fas fa-lightbulb"></i>
+  </button>
 
-    <section class="container">
-        <h2>About Me</h2>
-        <p>Hello and welcome to my personal webpage! I am Sagar Sharma, an IT Technologist currently working at Seneca Polytechnic. With a focus on Computer Networking and DevOps, I bring a dynamic approach to technical support and IT solutions.</p>
-        <p>I am a dynamic Computer Systems Networking student with a proven track record in providing comprehensive technical support at Seneca Polytechnic. Recognized for academic excellence and listed on the President's Honors List, I am equipped with in-depth knowledge and hands-on experience in promptly resolving technical issues, ensuring seamless access to college resources. I am committed to continuous learning and staying updated on evolving IT trends.</p>
-        <p>Let's connect and explore opportunities to collaborate or share insights within the IT industry. Feel free to reach out—I'm always open to networking and discussing new ideas!</p>
-    </section>
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+      <!-- Left Column -->
+      <div class="w3-third card">
+        <div class="w3-white w3-text-grey w3-card-4 card-content">
+          <div class="w3-display-container">
+            <!-- LinkedIn Profile Link -->
+            <div style="position: absolute; top: 10px; left: 10px; background-color: #0077b5; padding: 5px; border-radius: 5px;">
+              <a href="https://www.linkedin.com/in/sagar1350/" target="_blank" style="color: white; text-decoration: none;" title="Visit my LinkedIn Profile">
+                <i class="fa fa-linkedin" style="font-size: 24px;"></i>
+              </a>
+            </div>
 
-    <section class="container">
-        <h2>Experience</h2>
-        <h3>Seneca Polytechnic</h3>
-        <p><strong>IT Technical Support and Hyflex Ambassador</strong> (Sep 2023 - Present)</p>
-        <ul>
-            <li>Maintained and updated functionality checklists for Flex classrooms, ensuring 100% accuracy and completeness.</li>
-            <li>Proactively conducted weekly inspections of 20+ computer labs and e-classrooms, achieving a 100% detection rate for potential equipment issues.</li>
-            <li>Served as the Hybrid flexible (Hy-flex) ambassador, providing technical assistance to 30+ faculty members weekly.</li>
-        </ul>
-        <h3>Seneca Polytechnic</h3>
-        <p><strong>IT Service Desk Representative | Technical Support</strong> (Apr 2023 - Sep 2023)</p>
-        <ul>
-            <li>Handled an average of 50 Seneca account management requests per week with a 95% success rate.</li>
-            <li>Achieved a 90% first-call resolution rate for equipment issues, addressing over 250 requests monthly.</li>
-            <li>Utilized the EasyVista Ticketing System and CISCO Jabber:Finesse VoIP to manage and prioritize an average of 100 technical support requests per week.</li>
-        </ul>
-        <h3>Koppert</h3>
-        <p><strong>Logistic Associate</strong> (May 2022 - Apr 2023)</p>
-        <ul>
-            <li>Proficient in operating scanners and sales software for seamless sales and order management.</li>
-            <li>Extensive use of Microsoft's customized software D365 for efficient order administration and accurate sales data recording.</li>
-        </ul>
-        <h3>WorldLink Communications</h3>
-        <p><strong>Technical Support Analyst</strong> (Jan 2021 - Dec 2021)</p>
-        <ul>
-            <li>Provided exceptional technical support as a Technical Support Representative at WorldLink Communications.</li>
-            <li>Excelled in configuring routers to ensure uninterrupted internet availability and resolving diverse technical issues promptly.</li>
-        </ul>
-    </section>
+            <!-- Email Link -->
+            <div style="position: absolute; top: 10px; right: 10px; background-color: #0077b5; padding: 5px; border-radius: 5px;">
+              <a href="mailto:sharmasagar5438@gmail.com" style="color: white; text-decoration: none;" title="Email Me">
+                <i class="material-icons">email</i>
+              </a>
+            </div>
 
-    <section class="container">
-        <h2>Education</h2>
-        <h3>Seneca Polytechnic</h3>
-        <p><strong>Computer Systems Networking CSNC, Information Technology</strong> (May 2022 - Sep 2024)</p>
-        <ul>
-            <li>Grade: 3.9</li>
-            <li>Relevant Courses: Internet of Things, Linux/UNIX Administration, Microsoft Administration, Wireless Networks, Software-Defined Networks, Cloud Services</li>
-        </ul>
-        <h3>APEX Academy</h3>
-        <p><strong>College, Computer Science</strong> (Jan 2018 - Dec 2020)</p>
-        <ul>
-            <li>Grade: 3.92/4.0</li>
-            <li>Achieved the second highest GPA across Nepal, showcasing exceptional academic performance</li>
-        </ul>
-    </section>
+            <!-- Profile Image -->
+            <img src="https://github.com/ssharma533/myprofile/blob/main/1696137113817%20(2).jpg?raw=true" alt="Profile Photo">
+          </div>
 
-    <section class="container contact-info">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me through the following channels:</p>
-        <a href="mailto:your-email@example.com">your-email@example.com</a>
-        <a href="https://www.linkedin.com/in/sagar1350/">LinkedIn Profile</a>
-    </section>
+          <div class="w3-container">
+            <h5 class="teal-text"><b>Sagar Sharma</b></h5>
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>IT Technologist</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Saintsbury Square, Toronto, ON</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>sharmasagar5438@gmail.com</p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+1 647-870-9842</p>
+            <p><i class="fa fa-heart fa-fw w3-margin-right w3-large w3-text-teal"></i>Passionate about Computer Networking!</p>
+            <hr>
+          </div>
+
+          <!-- Skills Section -->
+          <div class="w3-container">
+            <h5 class="teal-text"><b>Skills</b></h5>
+            <ul>
+              <li><span class="highlight">Operating Systems:</span> Windows OS, MAC OS, Linux</li>
+              <li><span class="highlight">Cloud Services:</span> Azure, AWS</li>
+              <li><span class="highlight">Networking:</span> DNS, DHCP, Switching, Routing</li>
+              <li><span class="highlight">Database Management:</span> MS SQL, RDMS, DBMS</li>
+              <li><span class="highlight">Programming:</span> Python, Shell, Linux & Bash Scripting</li>
+              <li><span class="highlight">Ticketing System:</span> Easy Vista, Cisco Jabber</li>
+            </ul>
+            <hr>
+          </div>
+
+          <!-- Languages Section -->
+          <div class="w3-container">
+            <h5 class="teal-text"><b>Languages</b></h5>
+            <p>English (Fluent)</p>
+            <hr>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column -->
+      <div class="w3-twothird scrollable-content">
+        <!-- Professional Summary -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom card">
+          <div class="card-content">
+            <h2 class="w3-text-grey"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Professional Summary</h2>
+            <p>Dynamic Computer Systems Networking student with hands-on experience in technical support roles. Recognized for consistently meeting user needs, resolving technical issues efficiently, and staying up-to-date with the latest IT trends.</p>
+            <hr>
+          </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom card">
+          <div class="card-content">
+            <h2 class="w3-text-grey"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+            
+            <div class="w3-container">
+              <h5 class="teal-text"><b>ITS Technical Support and Hy-flex Ambassador @ Seneca Polytechnic</b></h5>
+              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep. 2023 - Present</h6>
+              <ul>
+                <li>Supported 30+ faculty members weekly with TeamViewer and AnyDesk troubleshooting.</li>
+                <li>Re-imaged PCs, configured BIOS settings with WDS, and used Dell Command Update.</li>
+                <li>Conducted AV checks using Crestron DMPS and Zoom Rooms, improving system functionality.</li>
+                <li>Maintained Flex classroom checklists with MS Excel and SharePoint.</li>
+              </ul>
+              <hr>
+            </div>
+
+            <div class="w3-container">
+              <h5 class="teal-text"><b>IT Service Desk Representative @ Seneca Polytechnic</b></h5>
+              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Apr. 2023 - Sep. 2023</h6>
+              <ul>
+                <li>Managed 50+ account requests weekly with a 95% success rate.</li>
+                <li>Achieved 90% first-call resolution for equipment issues.</li>
+                <li>Enhanced efficiency by 20% using Easy Vista and Cisco Jabber.</li>
+              </ul>
+              <hr>
+            </div>
+
+            <div class="w3-container">
+              <h5 class="teal-text"><b>Technical Support Analyst @ WorldLink Communications</b></h5>
+              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb. 2021 - Dec. 2021</h6>
+              <ul>
+                <li>Assisted ISP customers with router configurations and internet troubleshooting.</li>
+                <li>Resolved various technical and network performance issues.</li>
+              </ul>
+              <hr>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="w3-container w3-card w3-white">
+          <div class="card-content">
+            <h2 class="w3-text-grey"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+            <div class="w3-container">
+              <h5 class="teal-text"><b>Computer Systems Networking @ Seneca Polytechnic</b></h5>
+              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2022 - Sep. 2024</h6>
+              <p>GPA: 3.9/4.0</p>
+              <ul>
+                <li>Focused on IoT, Linux/UNIX Administration, Wireless Networks, and Cloud Services.</li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="w3-container w3-card w3-white">
+          <div class="card-content">
+            <h2 class="w3-text-grey"><i class="fa fa-award fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Certifications</h2>
+            <ul>
+              <li>Introduction to IoT - Cisco (Jun 2023)</li>
+              <li>Sensory Virtual Reality - Alison (Sep 2023)</li>
+            </ul>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="w3-container w3-teal w3-center w3-margin-top">
+    <p>Find me on LinkedIn</p>
+    <a href="https://www.linkedin.com/in/sagar1350/" target="_blank">
+      <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 24px; color: white;"></i>
+    </a>
+    <p>&copy; 2024 Sagar Sharma. All rights reserved.</p>
+  </footer>
 </body>
 </html>
