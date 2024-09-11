@@ -1,109 +1,153 @@
-/* Global styles */
-
+/* General Body Styling */
 body {
-  font-family: serif, sans-serif;
-  background-color: rgb(249, 249, 249); /* Light grey */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
+  padding: 0;
+  transition: background-color 0.5s, color 0.5s;
 }
 
+/* Dark Mode Styling */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .teal-text {
+  color: #80cbc4;
+}
+
+/* Layout */
+.w3-row-padding {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.w3-third, .w3-twothird {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+}
+
+/* Responsive Image */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Dark Mode Toggle Button */
+#mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+  transition: background-color 0.5s, transform 0.3s;
+}
+
+#mode-toggle:hover {
+  background-color: #005454;
+  transform: scale(1.1);
+}
+
+/* Card Container */
+.card {
+  perspective: 1200px;
+}
+
+.card-content {
+  background-color: #fff;
+  transition: transform 0.6s, box-shadow 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.card:hover .card-content {
+  transform: rotateY(15deg) rotateX(10deg) translateZ(30px);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* 3D Flip Animation */
+.card-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  border-radius: 15px;
+  transition: transform 0.6s, box-shadow 0.6s;
+}
+
+.card:hover .card-content::before {
+  transform: rotateY(0deg);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Text Effects */
 .teal-text {
-  color: #78c6c6; /* Teal color */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Lighter shadow with offset (1px horizontally, 1px vertically), blur radius (2px), and color (rgba black with 30% opacity) */
+  color: #008080;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .highlight {
   font-weight: bold;
-  color: #008080; /* Teal color */
+  color: #008080;
 }
 
+/* Scrollable Content */
 .scrollable-content {
-  max-height: calc(100vh - 0px); /* Adjust the height as needed */
+  max-height: calc(100vh - 50px);
   overflow-y: auto;
 }
 
-/* Header styles */
-
-.w3-content {
-  max-width: 1400px;
-}
-
-/* Left Column styles */
-
-.w3-third {
-  font-family: 'Roboto Slab', serif
-  height: 500vh; /* Adjust the height as needed */
-  overflow-y: auto;
-}
-
-
-/* Footer styles */
-
-.w3-teal {
-  background-color: #748279; /* Teal color */
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #008080;
   color: white;
 }
 
-/* Profile photo styles */
-
-.profile-photo {
-  width: 100%;
-  height: auto;
-}
-.w3-twothird {
-  background-color: rgb(226, 239, 245); /* Change this to the desired background color */
-}
-
-/* Links styles */
-.w3-twothird .w3-container {
-  background-color: rgb(226, 239, 245); /* Change this to the desired background color */
-}
-/* Work Experience header */
-.w3-twothird .w3-container h2 {
-  font-family: 'Roboto Slab', serif;
-  background-color: rgb(226, 239, 245);
-  padding: 10px; /* Add padding to make the background color visible */
-}
-
-
-
-a {
-  color: #0077b5; /* LinkedIn blue */
+footer a {
+  color: white;
   text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-.dark-mode {
-  background-color: #333;
-  color: #ddd;
+footer a:hover {
+  color: #80cbc4;
+  transform: scale(1.2);
 }
 
-.dark-mode button {
-  background-color: #555;
-  color: #ddd;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .w3-third, .w3-twothird {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
-/* Add this CSS to your existing styles or to the <style> tag in your HTML */
-
-.dark-mode {
-  background-color: #333;
-  color: #ddd;
-}
-
-.dark-mode button {
-  background-color: #555;
-  color: #ddd;
-}
-
-/* Apply dark mode styles to elements inside left and right columns */
-.dark-mode .w3-third .w3-white,
-.dark-mode .w3-twothird .w3-container,
-.dark-mode .w3-twothird .w3-container h2,
-.dark-mode .w3-twothird .w3-container p,
-.dark-mode .w3-twothird .w3-container ul,
-.dark-mode .w3-twothird .w3-container li {
-  background-color: #333;
-  color: #ddd;
-}
-
-
